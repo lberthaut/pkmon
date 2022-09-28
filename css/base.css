@@ -1,0 +1,108 @@
+body{
+    font-family: comic sans, roboto, arial;
+    margin: 0;
+}
+
+
+.header{
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+    background-color: red;
+}
+
+.user{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 16%;
+    vertical-align: middle;
+    align-items: center;
+    height: 50px;
+    margin-right: 3%;
+}
+
+.profilepic{
+    width: 80px;
+}
+
+.title, .subtitle{
+    margin: 0;
+    padding-top: 1%;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.tilepokemon{
+    border: 1px solid black;
+    margin: 1%;
+    text-align: center;
+    height: 150px;
+    overflow: hidden;
+    width: 25%;
+}
+.tilepokemon:hover .divtile{
+    display: none;
+}
+
+.divtile{
+    height: 150px;
+}
+
+.buttons_block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    vertical-align: middle;
+    margin-bottom: 5%;
+    margin-top: 3%;
+}
+
+.buttons{
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 0px;
+    padding: 5px;
+    margin: 0;
+    transition: background-color 0.2s, box-shadow 0.2s, border;
+}
+
+.buttons:hover{
+    background-color: red;
+    box-shadow: 1px 1px 3px 2px #000000;
+}
+
+.buttons:active{
+    border: 3px solid black;
+}
+
+.container{
+    height: 100vh;
+}
+
+.form_container{
+    box-shadow: 12px 12px 17px 5px rgba(0,0,0,0.46);
+    width: 20%;
+    padding: 3%;
+    margin: 0 auto;
+}
+
+form{
+    text-align: center;
+}
+
+.playbutton{
+    font-size: 38px;
+    border: 6px solid black;
+    padding: 2%;
+    margin-left: 35vw;
+}
