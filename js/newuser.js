@@ -1,4 +1,5 @@
 import {Choosestart} from './starter.js'
+import { startmap } from './map.js';
 
 export function Newuser () {
   if(!localStorage.getItem('pseudo')){
@@ -17,20 +18,30 @@ export function Newuser () {
     );
 
     //bouton submit formulaire
-    if(!localStorage.getItem('pseudo')){
-let submitbutton = document.querySelector(".submit_button");
-function Submituser (e){
-    let namevalue = document.querySelector('#pseudo').value;
-    let photovalue = document.querySelector('#photo').value;
-    localStorage.setItem('pseudo', namevalue);
-    localStorage.setItem('URLphoto', photovalue);
-    document.querySelector('.profilepic').src = localStorage.getItem('URLphoto')
-    document.querySelector('.subtitle').textContent = localStorage.getItem('pseudo')
-    document.querySelector('.container').innerHTML=`<button class="playbutton buttons">Let's play a game</button>`
-}
-submitbutton.addEventListener('click', Submituser)}
+    if (!localStorage.getItem("pseudo")) {
+      let submitbutton = document.querySelector(".submit_button");
+      function Submituser(e) {
+        let namevalue = document.querySelector("#pseudo").value;
+        let photovalue = document.querySelector("#photo").value;
+        localStorage.setItem("pseudo", namevalue);
+        localStorage.setItem("URLphoto", photovalue);
+        document.querySelector(".profilepic").src =
+          localStorage.getItem("URLphoto");
+        document.querySelector(".subtitle").textContent =
+          localStorage.getItem("pseudo");
+        document.querySelector(
+          ".container"
+        ).innerHTML = `<button class="playbutton buttons">Let's play a game</button>`;
+      }
+      submitbutton.addEventListener("click", Submituser);
+    }
 
 //Choix starter
-/*let choosestarter = document.querySelector('.playbutton');
-choosestarter.addEventListener('click', Choosestart);*/
+let choosestarter = document.querySelector('.playbutton');
+if(!localStorage.getItem('starter')){
+  choosestarter.addEventListener('click', Choosestart);
+}else{
+  startmap();
+}
+
 }

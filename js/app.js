@@ -23,7 +23,6 @@ img.src =
             header.querySelector('div').appendChild(img);
             img.className = 'profilepic'
 
-
 //pagination pokedex
 window.onscroll = function(){
     if(window.innerHeight + window.pageYOffset >= document.body.offsetHeight + 12){
@@ -49,7 +48,7 @@ function Refreshuser(){
 }
 pokeuser.addEventListener('click', Refreshuser);
 
-//changement photo et pseudo si joueur enregistré dans le localstorage
+//changement photo et pseudo par defaut si joueur enregistré dans le localstorage
 if (localStorage.getItem('pseudo') && localStorage.getItem('URLphoto')){
     document.querySelector('.profilepic').src = localStorage.getItem('URLphoto')
     document.querySelector('.subtitle').textContent = localStorage.getItem('pseudo')
