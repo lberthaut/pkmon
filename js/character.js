@@ -11,18 +11,30 @@ export function Character() {
     switch (e.key) {
       case "ArrowLeft":
         Moveleft();
+        RandomAttack();
         break;
       case "ArrowRight":
         Moveright();
+        RandomAttack();
         break;
       case "ArrowDown":
         Movedown();
+        RandomAttack();
         break;
       case "ArrowUp":
         Moveup();
+        RandomAttack();
         break;
     }
   });
+
+  function RandomAttack() {
+    let random_Number = Math.floor(Math.random() * 8);
+    if (random_Number == 1) {
+      console.log('attack');
+      /*   Combat(); */
+    }
+  }
 
   function Moveright() {
     let chara = document.querySelector(".chara");
@@ -34,17 +46,17 @@ export function Character() {
     chara.parentElement.previousElementSibling.appendChild(chara);
   }
 
-  function Movedown(){
+  function Movedown() {
     let chara = document.querySelector(".chara");
-    let n= chara.parentElement.getAttribute("id");
+    let n = chara.parentElement.getAttribute("id");
     let m = Number(n) + 10;
     let down_case = document.getElementById(`${m}`);
     down_case.appendChild(chara);
   }
 
-  function Moveup (){
+  function Moveup() {
     let chara = document.querySelector(".chara");
-    let n= chara.parentElement.getAttribute("id");
+    let n = chara.parentElement.getAttribute("id");
     let m = Number(n) - 10;
     console.log(n, m)
     let down_case = document.getElementById(`${m}`);

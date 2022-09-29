@@ -52,16 +52,14 @@ function Refreshuser() {
 pokeuser.addEventListener("click", Refreshuser);
 
 //changement photo et pseudo par defaut si joueur enregistré dans le localstorage
-if (localStorage.getItem("pseudo") && localStorage.getItem("URLphoto")) {
+if (localStorage.getItem("pseudo") && localStorage.getItem("URLphoto") && localStorage.getItem('starter')) {
   document.querySelector(".profilepic").src = localStorage.getItem("URLphoto");
   document.querySelector(".subtitle").textContent =
     localStorage.getItem("pseudo");
+  let starterpic = document.createElement('img');
+  let picstarter = localStorage.getItem('starter');
+  let pathpic = JSON.parse(picstarter).sprites.front_default;
+  starterpic.src = pathpic;
+  let headeruser = document.querySelector('.user');
+  headeruser.appendChild(starterpic);
 }
-if(localStorage.getItem('starter')){
-    let starterpic = document.createElement('img');
-    let picstarter = localStorage.getItem('starter');
-    let pathpic = JSON.parse(picstarter).sprites.front_default;
-    starterpic.src = pathpic;
-    let headeruser = document.querySelector('.user');
-    headeruser.appendChild(starterpic);
-    }
