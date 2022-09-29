@@ -25,20 +25,22 @@ header.querySelector("div").appendChild(img);
 img.className = "profilepic";
 
 //pagination pokedex
+let pokeButton = document.querySelector(".pokebutton");
+pokeButton.addEventListener('click', function GetPokeOnScroll() {
+  window.onscroll = function Getpokeonscroll() {
+    if (
+      window.innerHeight + window.pageYOffset >=
+      document.body.offsetHeight - 12
+    ) {
+      offset++;
+      getAllPokemon();
+    }
+  };
+})
 
-window.onscroll = function () {
-  if (
-    window.innerHeight + window.pageYOffset >=
-    document.body.offsetHeight - +12
-  ) {
-    offset++;
-    getAllPokemon();
-  }
-};
 
 
 //comportements boutons menu
-let pokeButton = document.querySelector(".pokebutton");
 function Refreshpoke() {
   document.querySelector(".container").innerHTML = "";
   getAllPokemon();
@@ -53,6 +55,7 @@ function Refreshuser() {
 }
 pokeuser.addEventListener("click", Refreshuser);
 
+
 //changement photo et pseudo par defaut si joueur enregistré dans le localstorage
 if (localStorage.getItem("pseudo") && localStorage.getItem("URLphoto") && localStorage.getItem('starter')) {
   document.querySelector(".profilepic").src = localStorage.getItem("URLphoto");
@@ -65,13 +68,4 @@ if (localStorage.getItem("pseudo") && localStorage.getItem("URLphoto") && localS
   let headeruser = document.querySelector('.user');
   headeruser.appendChild(starterpic);
 }
-
-//chargement bouton joueur si sur pokedex
-let pokebutton = document.querySelector('.pokebutton');
-pokebutton.addEventListener('click', () => {
-  let userbutton = document.querySelector('.userbutton')
-  if (userbutton.style.display = 'none') {
-    userbutton.style.display = 'block';
-  }
-})
 

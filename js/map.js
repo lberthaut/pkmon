@@ -17,7 +17,6 @@ export function startmap() {
 		}
 	}
 	container.appendChild(tableElement);
-	document.querySelector('.userbutton').style.display = 'none';
 
 	Character();
 }

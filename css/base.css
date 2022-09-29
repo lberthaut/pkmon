@@ -169,3 +169,9 @@ form {
   display: block;
   margin: 0 auto;
 }
+
+.message_attack{
+  margin: 0 auto;
+  font-size: 36px;
+  font-weight: bold;
+}
