@@ -1,161 +1,169 @@
-body{
-    font-family: comic sans, roboto, arial;
-    margin: 0;
+body {
+  font-family: comic sans, roboto, arial;
+  margin: 0;
 }
 
-
-.header{
-    display: flex;
-    flex-direction: row;
-    height: 10%;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    vertical-align: middle;
-    background-color: red;
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 10%;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: middle;
+  background-color: red;
 }
 
-.user{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 16%;
-    vertical-align: middle;
-    align-items: center;
-    height: 50px;
-    margin-right: 3%;
+.user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 16%;
+  vertical-align: middle;
+  align-items: center;
+  height: 50px;
+  margin-right: 3%;
 }
 
-.profilepic{
-    width: 80px;
+.profilepic {
+  width: 80px;
 }
 
-.title, .subtitle{
-    margin: 0;
-    padding-top: 1%;
+.title,
+.subtitle {
+  margin: 0;
+  padding-top: 1%;
+  margin-right: 2%;
 }
 
-.content{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-.tilepokemon{
-    border: 1px solid black;
-    margin: 1%;
-    text-align: center;
-    height: 150px;
-    overflow: hidden;
-    width: 25%;
+.tilepokemon {
+  border: 1px solid black;
+  margin: 1%;
+  text-align: center;
+  height: 150px;
+  overflow: hidden;
+  width: 25%;
 }
-.tilepokemon:hover .divtile{
-    display: none;
-}
-
-.divtile{
-    height: 150px;
+.tilepokemon:hover .divtile {
+  display: none;
 }
 
-.buttons_block{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    vertical-align: middle;
-    margin-bottom: 5%;
-    margin-top: 3%;
+.divtile {
+  height: 150px;
 }
 
-.buttons{
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 0px;
-    padding: 5px;
-    margin: 0;
-    transition: background-color 0.2s, box-shadow 0.2s, border;
+.buttons_block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  vertical-align: middle;
+  margin-bottom: 5%;
+  margin-top: 3%;
 }
 
-.buttons:hover{
-    background-color: red;
-    box-shadow: 1px 1px 3px 2px #000000;
+.buttons {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 0px;
+  padding: 5px;
+  margin: 0;
+  transition: background-color 0.2s, box-shadow 0.2s, border;
 }
 
-.buttons:active{
-    border: 3px solid black;
+.buttons:hover {
+  background-color: red;
+  box-shadow: 1px 1px 3px 2px #000000;
 }
 
-.container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; 
+.buttons:active {
+  border: 3px solid black;
 }
 
-.form_container{
-    box-shadow: 12px 12px 17px 5px rgba(0,0,0,0.46);
-    width: 20%;
-    padding: 3%;
-    margin: 0 auto;
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-form{
-    text-align: center;
+.form_container {
+  box-shadow: 12px 12px 17px 5px rgba(0, 0, 0, 0.46);
+  width: 20%;
+  padding: 3%;
+  margin: 0 auto;
 }
 
-.playbutton{
-    font-size: 38px;
-    border: 6px solid black;
-    padding: 2%;
-    margin-left: 35vw;
+form {
+  text-align: center;
 }
 
-.ulpokemonstarter{
-    width: 30%;
+.playbutton {
+  font-size: 38px;
+  border: 6px solid black;
+  padding: 2%;
+  margin-left: 35vw;
 }
 
-.tilepokemonstarter{
-    border: 1px solid black;
-    margin: 1%;
-    text-align: center;
-    height: 150px;
-    overflow: hidden;
-    width: 80%;
+.ulpokemonstarter {
+  width: 30%;
 }
 
-.tilepokemonstarter:hover .divtile{
-    display: none;
+.tilepokemonstarter {
+  border: 1px solid black;
+  margin: 1%;
+  text-align: center;
+  height: 150px;
+  overflow: hidden;
+  width: 80%;
 }
 
-.ulpokemonstarterchoosen{
-    width: 30%;
-    margin-left: 35vw;
+.tilepokemonstarter:hover .divtile {
+  display: none;
 }
 
-.startbutton{
-background-color: white;
-    border: 2px solid black;
-    border-radius: 0px;
-    padding: 10px 20px 10px 20px;
-    margin-top: 6%;
-    margin-right: 20%;
-    transition: background-color 0.2s, box-shadow 0.2s, border;
-    height: 40px;
-    font-weight: bold;
+.ulpokemonstarterchoosen {
+  width: 30%;
+  margin-left: 35vw;
 }
 
-.startbutton:hover{
-    background-color: red;
-    box-shadow: 1px 1px 3px 2px #000000;
+.startbutton {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 0px;
+  padding: 10px 20px 10px 20px;
+  margin-top: 6%;
+  margin-right: 20%;
+  transition: background-color 0.2s, box-shadow 0.2s, border;
+  height: 40px;
+  font-weight: bold;
 }
 
-.cases{
-    background-size: 24px;
-    height: 48px;
-    width: 48px;
-    padding: 0;
+.startbutton:hover {
+  background-color: red;
+  box-shadow: 1px 1px 3px 2px #000000;
 }
 
-.map{
-    border-spacing : 0px;
-    margin: 0 auto;
+.cases {
+  background-size: 24px;
+  height: 48px;
+  width: 48px;
+  padding: 0;
+}
+
+.map {
+  border-spacing: 0px;
+  margin: 0 auto;
+}
+
+.chara {
+  height: 60px;
+  width: 60px;
+  display: block;
+  margin: 0 auto;
 }

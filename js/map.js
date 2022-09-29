@@ -1,4 +1,6 @@
-export function startmap(){
+import { Character } from "./character.js";
+
+export function startmap() {
   const container = document.querySelector(".container");
   container.innerHTML = "";
   const tableElement = document.createElement("table");
@@ -8,7 +10,7 @@ export function startmap(){
     tableElement.appendChild(row);
     for (let t = 0; t < 10; t++) {
       const cases = document.createElement("td");
-      cases.setAttribute("index", `${c}${t}`);
+      cases.setAttribute("id", `${c == 0 ? '' : c}${t}`);
       cases.className = "cases";
       cases.style.backgroundImage = "url(../assets/ground.png)";
       row.appendChild(cases);
@@ -16,11 +18,12 @@ export function startmap(){
   }
   container.appendChild(tableElement);
 
-  let chara = document.createElement('img');
-  chara.src = '../assets/eva.png';
-  let cases = document.getElementsByClassName('cases');
-  var arr = Array.prototype.slice.call( cases )
-  let characase_start = arr[0]
-  console.log(characase_start);
-  characase_start.appendChild(chara);
+  Character();
+
+  function Attackrandom () {
+    let array = Array.from(Array(100).keys())
+    
+  }
+
+  Attackrandom();
 }
