@@ -1,3 +1,5 @@
+import { Pokecombat } from "./combat.js";
+
 export function Character() {
   let chara = document.createElement("img");
   chara.src = "../assets/eva.png";
@@ -32,7 +34,7 @@ export function Character() {
     let random_Number = Math.floor(Math.random() * 8);
     if (random_Number == 1) {
       console.log('attack');
-      /*   Combat(); */
+      Pokecombat();
     }
   }
 
@@ -58,7 +60,6 @@ export function Character() {
     let chara = document.querySelector(".chara");
     let n = chara.parentElement.getAttribute("id");
     let m = Number(n) - 10;
-    console.log(n, m)
     let down_case = document.getElementById(`${m}`);
     down_case.appendChild(chara);
   }

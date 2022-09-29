@@ -25,15 +25,17 @@ header.querySelector("div").appendChild(img);
 img.className = "profilepic";
 
 //pagination pokedex
+
 window.onscroll = function () {
   if (
     window.innerHeight + window.pageYOffset >=
-    document.body.offsetHeight + 12
+    document.body.offsetHeight - +12
   ) {
     offset++;
     getAllPokemon();
   }
 };
+
 
 //comportements boutons menu
 let pokeButton = document.querySelector(".pokebutton");
@@ -63,3 +65,13 @@ if (localStorage.getItem("pseudo") && localStorage.getItem("URLphoto") && localS
   let headeruser = document.querySelector('.user');
   headeruser.appendChild(starterpic);
 }
+
+//chargement bouton joueur si sur pokedex
+let pokebutton = document.querySelector('.pokebutton');
+pokebutton.addEventListener('click', () => {
+  let userbutton = document.querySelector('.userbutton')
+  if (userbutton.style.display = 'none') {
+    userbutton.style.display = 'block';
+  }
+})
+
