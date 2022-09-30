@@ -33,7 +33,6 @@ export function Character() {
   function RandomAttack() {
     let random_Number = Math.floor(Math.random() * 8);
     if (random_Number == 1) {
-      console.log('attack');
       Pokecombat();
     }
   }
