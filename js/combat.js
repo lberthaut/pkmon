@@ -25,7 +25,7 @@ export function Pokecombat() {
                 container.innerHTML = '';
                 container.innerHTML = `<div class="combat_container">
                                                                 <div class="ennemy_block">
-                                                                <div class="HP_block">
+                                                                <div class="HP_block HP_block_ennemy">
                                                                     <td>
                                                                         <div class="barre barre_contenant">
                                                                             <div class="barre barre_dynamique" style="width:<?php echo (100*$infosmembre['vie_du_joueur'])/$VieMax; ?>%;" ></div>
@@ -34,10 +34,11 @@ export function Pokecombat() {
                                                                     <p class="ennemyHP">HP: ${data.stats[0].base_stat}</p>
                                                                     </div>
                                                                     <img class="ennemypic" src="${data.sprites.front_default}"/>
-                                                                    
                                                                 </div>
+                                                                <p class="ennemyname"></p>
+                                                                <p class="mypkmonname"></p>
                                                                 <div class="mypkmon_block">
-                                                                <img class="starterpic" src="${JSON.parse(localStorage.getItem('starter')).sprites.front_default}">
+                                                                <img class="starterpic" src="${JSON.parse(localStorage.getItem('starter')).sprites.back_default}">
                                                                 <div class="HP_attacks_block">
                                                                 <div class="HP_block_my">
                                                                 <td>

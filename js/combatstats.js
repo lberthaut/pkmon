@@ -1,12 +1,15 @@
+import { Combatmove } from "./combatmove.js";
+
 export function Combatstats(numberpkmon) {
 
     let arrayEnnemyAttacks = [];
-    let speedEnnemy = []
+    let speedEnnemy = [];
+    //recuperations datas pokemon ennemie
     fetch(`https://pokeapi.co/api/v2/pokemon/${numberpkmon}`)
         .then((response) => response.json())
         .then((data) => {
+            document.querySelector('.ennemyname').textContent = data.name
             speedEnnemy.push(data.stats[5]);
-            console.log(speedEnnemy)
             let allAttackEnnemyArray = [data.moves]
             var fourAttack = allAttackEnnemyArray[0].slice(0);
             var arrayFourAttack = [];
@@ -19,10 +22,11 @@ export function Combatstats(numberpkmon) {
                     })
             }
         })
-    console.log(arrayEnnemyAttacks);
-
-    let buttonAttack = document.querySelectorAll('.attack_button')
+    //recuperation datas starter
+    let buttonAttack = document.querySelectorAll('.attack_button');
+    document.querySelector('.mypkmonname').textContent = JSON.parse(localStorage.getItem('starter')).name;
     let arrayMyPkmonAttacks = [];
+    Combatmove(arrayMyPkmonAttacks, arrayEnnemyAttacks, speedEnnemy);
     let mypkmonattacks = JSON.parse(localStorage.getItem('starter')).moves;
     var mypkmonfourAttack = mypkmonattacks.slice(0);
     var arraymypkmonFourAttack = [];
@@ -34,7 +38,5 @@ export function Combatstats(numberpkmon) {
                 arrayMyPkmonAttacks.push(data);
                 buttonAttack[i].textContent = data.names[3].name;
             })
-        console.log(arrayMyPkmonAttacks);
-    }
-    console.log(arrayMyPkmonAttacks);
+    };
 }
